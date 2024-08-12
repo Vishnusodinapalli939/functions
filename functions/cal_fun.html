@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculator(a,b,c){
+            if(c=='+')
+                alert(a+b);
+            else if(c=='-')
+                if(a>b)
+                    alert(a-b);
+                else
+                    alert(b-a);
+            else if(c=='*')
+                alert(a*b);
+            else if(c=='/')
+                if(a>b)
+                    alert(a/b);
+                else
+                    alert(b/a);
+            else if(c=='%')
+                alert(a%b);
+        }
+        a=+prompt("enter a value");
+        b=+prompt("enter b value");
+        c=prompt("enter your operator to perforn the operation");
+        calculator(a,b,c);
+
+    </script>
+</body>
+</html>

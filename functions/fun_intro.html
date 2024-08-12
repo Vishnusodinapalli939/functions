@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    functions:a set of statements that performs a task
+    why we use functions?
+    *resuability--we can use same function with diffrent arguments.
+    *redability
+    JavaScript Function Syntax:
+    --A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+    --The parentheses may include parameter names separated by commas:
+        (parameter1, parameter2, ...)
+    -- The code to be executed, by the function, is placed inside curly brackets: {}
+    what is Function Return?
+    --When JavaScript reaches a return statement, the function will stop executing.
+    -->
+    <!-- 
+    types of functions:we have 3 types of functions
+    1.named functions or normal functions
+    2.anonymous function or variable function(function expression)
+    3.arrow function
+    -->
+    <script>
+        // //named function without parameter
+        // function demo(){
+        //     console.log("hello");
+        // }
+        // demo();
+        //named function with parameter
+        function demo1(a){
+            console.log(a,"hello");
+        }
+        demo1(10);
+        //anonymous function or variable function
+        // without declaring the functon name is called anonymous function or lambda function.
+        const x=function(){
+            console.log("hello");
+            return "welcome";
+        }
+        console.log(x()); //hello welcome
+       //arrow function
+       /*
+       in arrow function we use const,we can't use let & var.
+       the code length is decreased.
+       */
+       const a=()=>{
+        let b="function";
+        console.log("arrow",b);
+       }
+       a();
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    declaration of variables: in 2 ways
+    1.global 
+    2.local
+      i.block scope
+      ii.function scope
+    -->
+      <!-- 
+    1.global:when we declare a variable as global variables then
+    i.we can access that variable anywhere in the program.
+    ii.accessible inside of block/function.
+    iii.accessible outside of block/function.
+      -->
+    <script>
+        //global variable
+        //when we use var,let and const as global variables then we can access inside/outside of block/function.
+        const a=10;
+        {
+            console.log(a);
+        }
+        console.log(a);
+        let x=()=>{
+            console.log(a);
+        }
+        x();
+        //local variables
+        // i.block
+        /*  if we declare a variable inside the block,
+        --var act as global variable in block scope
+        --let act as a local variable(access inside the block only)
+        --const act as a local varable(          "    "           )
+        */
+        {
+            const b=20;
+            console.log(b);
+        }
+        //ii.function 
+       //var,let,const all are having function scope only
+        function demo(){
+            var c=30;
+            console.log(c);
+        }
+        demo();
+        console.log(c);
+        {
+            console.log(c);
+        }
+
+    </script>
+    <!-- 
+            global    block    function   redeclaration     reassigning
+    var     yes        no        yes         yes             yes
+    
+    let     no         yes       yes          no              yes
+
+    const   no         yes      yes          no              no
+
+    -->
+
+</body>
+</html>
